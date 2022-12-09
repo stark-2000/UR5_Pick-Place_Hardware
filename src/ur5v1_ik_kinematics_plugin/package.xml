@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <name>ur5v1_ik_kinematics_plugin</name>
+  <version>1.4.5</version>
+  <description>A MoveIt! Kinematics plugin using TRAC-IK</description>
+  <author>Tej Kiran</author>
+  <maintainer>email="itej89@gmail.com"</maintainer>
+  <license>MIT License</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>moveit_core</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>tf_conversions</build_depend>
+
+  <run_depend>moveit_core</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>tf_conversions</run_depend>
+
+  <export>
+    <moveit_core plugin="${prefix}/ur5v1_ik_kinematics_description.xml"/>
+  </export>
+</package>

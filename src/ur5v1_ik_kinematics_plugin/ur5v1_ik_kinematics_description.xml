@@ -1,0 +1,7 @@
+<library path="lib/libur5v1_ik_kinematics_plugin">
+  <class name="ur5v1_ik_kinematics_plugin/UR5V1_IKKinematicsPlugin" type="ur5v1_ik_kinematics_plugin::UR5V1_IKKinematicsPlugin" base_class_type="kinematics::KinematicsBase">
+    <description>
+      A implementation of kinematics as a plugin based on TRAC-IK.
+    </description>
+  </class>
+</library>
