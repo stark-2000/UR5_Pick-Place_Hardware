@@ -71,16 +71,33 @@
      - [click here to view the file](src/ur5v1/src/robot_params.py)
  - "utilities.py" - python program containing the FK calc method.
      - [click here to view the file](src/ur5v1/src/utilities.py)
- - "pick_place_moveit_joint_control.cpp" - move group c++ interface for pick & place operation, calls the planner and passes the pose goal defined in moveit package.
+ - "pick_place_moveit_joint_control.cpp" - move group c++ interface for pick & place operation using the angles generated using our IK, calls the planner and passes the pose goal defined in moveit package.
      - [click here to view the file](src/ur5v1/src/pick_place_moveit_joint_control.cpp)
- - "pick_and_place.py" - python program which does pick & place operation in Gazebo. (same as prev file but doesn't use moveit, directly passes the value to gazebo for action)
+ - "pick_and_place.py" - python program which does pick & place operation using our own IK in Gazebo. (same as prev file but doesn't use moveit, directly passes the value to gazebo for action)
      - [click here to view the file](src/ur5v1/src/pick_and_place.py)
  - "IK_Nemerical_DH.py" - python program which has the IK solver using Newton - Rapson method.
      - [click here to view the file](src/ur5v1/src/IK_Nemerical_DH.py)
- - "robot_joint_publisher.py" - python program which publishes the joint angles computed.
+ - "robot_joint_publisher.py" - python program which publishes the joint angles computed for Gazebo simulation.
      - [click here to view the file](src/ur5v1/src/robot_joint_publisher.py) 
 
-## DOFs and Dimensions: 
+## Instructions to run the package:
+```
+git clone https://github.com/stark-2000/UR5_Pick-Place_Hardware.git
+cd UR5_Pick-Place_Hardware
+catkin_make
+source ./devel/setup.bash
+roslaunch ur5_moveit demo.launch
+rosrun ur5v1 pick_place_moveit_joint_control
+```
+```
+source ./devel/setup.bash
+roslaunch ur5v1 control.launch
+python3 ./src/ur5v1/src/pick_and_place.py
+```
+click play button in Gazeboo before doing the pick & place
+
+
+## DOF and Dimensions: 
 
 ![My Image](./readme_image/dof_formula.png)
 
