@@ -120,7 +120,9 @@
  - The workspace of a UR arm is spherical, and in the working area diagrams it’s represented with two concentric circles, a smaller one labelled “Recommended Reach” and a slightly larger one labelled “Max. working area”. In the centre of the workspace, directly above and below the base joint there is a column, inside which there are also some restrictions on robot movement.
  - The example below is from the UR5e robot working area diagram that can be found here:
 
-<div style="text-align:center"><img src="./readme_image/workspace_study_CAD.png" /></div>
+<p align="center">
+  <img src="./readme_image/workspace_study_CAD.png" />
+</p>
 
 
 ## Assumptions:
