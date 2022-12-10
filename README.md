@@ -146,7 +146,7 @@ https://user-images.githubusercontent.com/78305300/206824643-dc5ea155-37e7-467e-
 
  - The simulation video demonstrating the application of ‘MoveIt’ ROS package in Rviz, utilising our own developed IK plugin, are archived in the folder ‘results’ in main branch.
 
-https://user-images.githubusercontent.com/78305300/206824651-565fc9dc-3db8-45b6-b45d-8273c6baae5d.mp4
+https://user-images.githubusercontent.com/78305300/206824744-f6c292a9-440b-4d54-b393-7ceaf4e11a54.mp4
 
 
 ## Implementation on real hardware – UR5e:
