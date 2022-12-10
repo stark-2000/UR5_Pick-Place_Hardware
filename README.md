@@ -31,8 +31,8 @@
 
 ## Guidance:
  - Dr. Reza Monfaredi & support from TAs for ENPM-662 course
- - Pavan Mantripragada
- - Adarsh Malapaka
+    - Pavan Mantripragada
+    - Adarsh Malapaka
 
 ## Application:
  - The project will implement the basic pick and place operation for the given co-ordinates of the end-effector. The ambitious and the fallback goals of the above application are described as below:
@@ -81,12 +81,11 @@
 ## DOFs and Dimensions: 
 
 ![My Image](./readme_image/dof_formula.png)
-config
 
-Number of Links N = 6
-Number of Joints J = 5
-DOF in 3-D space m = 6
-DoF = 6(6-1-5) + 5 * 1 = 5
+- Number of Links N = 6
+- Number of Joints J = 5
+- DOF in 3-D space m = 6
+- DoF = 6(6-1-5) + 5 * 1 = 5
 
 ![My Image](./readme_image/dimensions.png)
 
@@ -121,7 +120,7 @@ DoF = 6(6-1-5) + 5 * 1 = 5
  - The workspace of a UR arm is spherical, and in the working area diagrams it’s represented with two concentric circles, a smaller one labelled “Recommended Reach” and a slightly larger one labelled “Max. working area”. In the centre of the workspace, directly above and below the base joint there is a column, inside which there are also some restrictions on robot movement.
  - The example below is from the UR5e robot working area diagram that can be found here:
 
-![My Image](./readme_image/workspace_study_CAD.png)
+<div style="text-align:center"><img src="./readme_image/workspace_study_CAD.png" /></div>
 
 
 ## Assumptions:
