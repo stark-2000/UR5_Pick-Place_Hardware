@@ -95,6 +95,7 @@ Run Rviz simulation - Pick & Place
  ```
  - Open new terminal and run below command
  ```
+ source ./devel/setup.bash
  rosrun ur5v1 pick_place_moveit_joint_control
  ```
 Run Gazebo simulation - Pick & Place
