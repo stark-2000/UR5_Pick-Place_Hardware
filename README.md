@@ -61,7 +61,7 @@
      - [click here to view the file](./results)
  - "src" folder contains the ROS packages
      - [click here to view the file](./src)
- - "UR5e_Model" folder contains the SOLIDWORKS model developed
+ - "UR5_Model" folder contains the SOLIDWORKS model developed
      - [click here to view the file](./UR5_Model)
  - "PPT_Final Project" is the final presentation given in class
      - [click here to view the file](./PPT_Final%20Project.pptx)
