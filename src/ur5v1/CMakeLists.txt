@@ -130,10 +130,8 @@ include_directories(
 
 
 add_executable(pick_place_moveit_joint_control ./src/pick_place_moveit_joint_control.cpp)
-add_executable(pick_place_moveit_ur5v1 ./src/pick_place_moveit.cpp)
 
 target_link_libraries(pick_place_moveit_joint_control ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-target_link_libraries(pick_place_moveit_ur5v1 ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
