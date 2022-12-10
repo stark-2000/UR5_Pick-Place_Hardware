@@ -103,7 +103,7 @@ Run Gazebo simulation - Pick & Place
  source ./devel/setup.bash
  roslaunch ur5v1 control.launch
  ```
-Click play button in Gazeboo and open new terminal & run following command
+Click play button in Gazebo and open new terminal & run below command
 ```
 python3 ./src/ur5v1/src/pick_and_place.py
 ```
