@@ -12,7 +12,9 @@
  - Utilising the core concepts from the ‘Introduction to Robot Modelling’ course, it is agreed among the team members to explore these concepts in a real-world hardware application.
  - Upon several discussions with Prof.Reza Monfaredi and evaluating different available options at the University of Maryland labs, it is narrowed down to utilise Universal Robot’s UR5 manipulator, a flexible robotic arm, to implement ‘pick and place’ application.
 
-![My Image](./readme_image/UR5_pic.png)
+<p align="center">
+  <img src="./readme_image/UR5_pic.png" />
+</p>
 
 
 ## Purpose of the Project:
@@ -48,7 +50,7 @@
 
 ## Folder Structure:
  - "Pre-Proposal" folder contains the project pre-proposal (word & PDF).
-     - [a relative link](./Pre-Proposal)
+     - [click here to view the file](./Pre-Proposal)
  - "Proposal folder" contains the project proposal (word & PDF).
      - [a relative link](./Proposal)
  - "readme_image" folder contains the readme images.
@@ -87,7 +89,9 @@
 - DOF in 3-D space m = 6
 - DoF = 6(6-1-5) + 5 * 1 = 5
 
-![My Image](./readme_image/dimensions.png)
+<p align="center">
+  <img src="./readme_image/dimensions.png" />
+</p>
 
 
 ## CAD Model:
@@ -107,7 +111,9 @@
  - Inverse kinematics problem can be viewed as finding roots of a nonlinear equation: T(θ) = X
  - Many numerical methods exist for finding roots of nonlinear equations. The standard Newton-Raphson method for solving x = f(θ), where θ ∈ Rn and x ∈ Rm.
 
-![My Image](./readme_image/IK_graph.png)
+<p align="center">
+  <img src="./readme_image/IK_graph.png" />
+</p>
 
 
  - Joint update equation is (Newton – Raphson method):
