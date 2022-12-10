@@ -13,7 +13,7 @@
  - Upon several discussions with Prof.Reza Monfaredi and evaluating different available options at the University of Maryland labs, it is narrowed down to utilise Universal Robot’s UR5e manipulator, a flexible robotic arm, to implement ‘pick and place’ application.
 
 <p align="center">
-  <img src="./readme_image/UR5e_pic.png" />
+  <img src="./readme_image/UR5_pic.png" />
 </p>
 
 
@@ -62,46 +62,46 @@
  - "src" folder contains the ROS packages
      - [click here to view the file](./src)
  - "UR5e_Model" folder contains the SOLIDWORKS model developed
-     - [click here to view the file](./UR5e_Model)
+     - [click here to view the file](./UR5_Model)
  - "PPT_Final Project" is the final presentation given in class
      - [click here to view the file](./PPT_Final%20Project.pptx)
 
 ## ROS Packages:
  - "robot_params.py" - python program containing the DH table and a class to access the DH table data.
-     - [click here to view the file](src/UR5ev1/src/robot_params.py)
+     - [click here to view the file](src/UR5v1/src/robot_params.py)
  - "utilities.py" - python program containing the FK calc method.
-     - [click here to view the file](src/UR5ev1/src/utilities.py)
+     - [click here to view the file](src/UR5v1/src/utilities.py)
  - "pick_place_moveit_joint_control.cpp" - move group c++ interface for pick & place operation using the angles generated using our IK, calls the planner and passes the pose goal defined in moveit package.
-     - [click here to view the file](src/UR5ev1/src/pick_place_moveit_joint_control.cpp)
+     - [click here to view the file](src/UR5v1/src/pick_place_moveit_joint_control.cpp)
  - "pick_and_place.py" - python program which does pick & place operation using our own IK in Gazebo. (same as prev file but doesn't use moveit, directly passes the value to gazebo for action)
-     - [click here to view the file](src/UR5ev1/src/pick_and_place.py)
+     - [click here to view the file](src/UR5v1/src/pick_and_place.py)
  - "IK_Nemerical_DH.py" - python program which has the IK solver using Newton - Rapson method.
-     - [click here to view the file](src/UR5ev1/src/IK_Nemerical_DH.py)
+     - [click here to view the file](src/UR5v1/src/IK_Nemerical_DH.py)
  - "robot_joint_publisher.py" - python program which publishes the joint angles computed for Gazebo simulation.
-     - [click here to view the file](src/UR5ev1/src/robot_joint_publisher.py) 
+     - [click here to view the file](src/UR5v1/src/robot_joint_publisher.py) 
 
 ## Instructions to run the package:
 Run the following commands in order:
 Clone Repo and Build
 ```
-git clone https://github.com/stark-2000/UR5e_Pick-Place_Hardware.git
-cd UR5e_Pick-Place_Hardware
+git clone https://github.com/stark-2000/UR5_Pick-Place_Hardware.git
+cd UR5_Pick-Place_Hardware
 catkin_make
 ```
 Run Rviz simulation of Pick & Place
 ```
 source ./devel/setup.bash
-roslaunch UR5e_moveit demo.launch
-rosrun UR5ev1 pick_place_moveit_joint_control
+roslaunch UR5_moveit demo.launch
+rosrun UR5v1 pick_place_moveit_joint_control
 ```
 Run Gazebo simulation of pick & place
 ```
 source ./devel/setup.bash
-roslaunch UR5ev1 control.launch
+roslaunch UR5v1 control.launch
 ```
 Click play button in Gazeboo before doing the pick & place
 ```
-python3 ./src/UR5ev1/src/pick_and_place.py
+python3 ./src/UR5v1/src/pick_and_place.py
 ```
 
 ## DOF and Dimensions: 
@@ -120,7 +120,7 @@ python3 ./src/UR5ev1/src/pick_and_place.py
 
 ## CAD Model:
 
-![My Image](./readme_image/UR5e_CAD.png)
+![My Image](./readme_image/UR5_CAD.png)
 
 
 ## DH Table:
