@@ -81,7 +81,7 @@
      - [click here to view the file](src/ur5v1/src/robot_joint_publisher.py) 
 
 ## Instructions to run the package:
-Run the following commands in order:\\
+Run the following commands in order: <br/>
 Clone Repo and Build
 ```
 git clone https://github.com/stark-2000/UR5_Pick-Place_Hardware.git
