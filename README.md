@@ -71,7 +71,7 @@
      - [click here to view the file](src/ur5v1/src/robot_params.py)
  - "utilities.py" - python program containing the FK calc method.
      - [click here to view the file](src/ur5v1/src/utilities.py)
- - "pick_place_moveit_joint_control.cpp" - move group c++ interface for pick & place operation using the angles generated using our IK, calls the planner and passes the pose goal defined in moveit package.
+ - "pick_place_moveit_joint_control.cpp" - move group c++ interface for pick & place operation using the angles generated using our IK, calls the planner and passes the goal pose defined in moveit package.
      - [click here to view the file](src/ur5v1/src/pick_place_moveit_joint_control.cpp)
  - "pick_and_place.py" - python program which does pick & place operation using our own IK in Gazebo. (same as prev file but doesn't use moveit, directly passes the value to gazebo for action)
      - [click here to view the file](src/ur5v1/src/pick_and_place.py)
