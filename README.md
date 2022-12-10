@@ -91,17 +91,17 @@ catkin_make
 Run Rviz simulation of Pick & Place
 ```
 source ./devel/setup.bash
-roslaunch UR5_moveit demo.launch
-rosrun UR5v1 pick_place_moveit_joint_control
+roslaunch ur5_moveit demo.launch
+rosrun ur5v1 pick_place_moveit_joint_control
 ```
 Run Gazebo simulation of pick & place
 ```
 source ./devel/setup.bash
-roslaunch UR5v1 control.launch
+roslaunch ur5v1 control.launch
 ```
 Click play button in Gazeboo before doing the pick & place
 ```
-python3 ./src/UR5v1/src/pick_and_place.py
+python3 ./src/ur5v1/src/pick_and_place.py
 ```
 
 ## DOF and Dimensions: 
