@@ -1,5 +1,148 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 ---
-# UR5_Pick-Place_Hardware
-Hardware based pick &amp; place operation using UR5
+# Hardware Implementation of Pick & Place Operation using UR5e
+
+## Disclaimer
+ - License: BSD & MIT
+ - License File: LICENSE (in the project directory)
+
+## Project Overview and Description:
+ - The main objective of this project is to implement an application based on basic pick and place operation using the Universal UR5 manipulator in the Robot Realisation Laboratory.
+ - Utilising the core concepts from the ‘Introduction to Robot Modelling’ course, it is agreed among the team members to explore these concepts in a real-world hardware application.
+ - Upon several discussions with Prof.Reza Monfaredi and evaluating different available options at the University of Maryland labs, it is narrowed down to utilise Universal Robot’s UR5 manipulator, a flexible robotic arm, to implement ‘pick and place’ application.
+
+![My Image](./readme_image/UR5_pic.png)
+
+
+## Purpose of the Project:
+ - The scope of the project is to implement an application based on pick and place operation using the UR5 robotic arm, utilising the concepts of forward kinematics, inverse kinematics, and the tools such as Solidworks, Gazebo and ROS.
+ - Here the inverse kinematic and forward kinematics of the robot may be studied and explored.
+ - Gazebo implementation of pick and place may be performed using SOLIDWORKS model and our own ROS package.
+ - Deploy the parameters derived for IK and FK on the official ROS package on real hardware UR5 in RRL.
+
+## Personnel:
+ - Dhinesh Rajasekaran 
+    - UID: 119400241
+ - Tej Kiran
+    - UID: 119197066
+ - Arshad Shaik
+    - UID: 118438832
+
+## Guidance:
+ - Dr. Reza Monfaredi & support from TAs for ENPM-662 course
+ - Pavan Mantripragada
+ - Adarsh Malapaka
+
+## Application:
+ - The project will implement the basic pick and place operation for the given co-ordinates of the end-effector. The ambitious and the fallback goals of the above application are described as below:
+
+ - Ambitious Goal:
+    - Check availability of the end effector and move the robot arm to desired waypoints in the 3D space, to perform an operation such as pick and place, hook etc.
+    - In the event of its availability of end-effector, basic pick and place of some objects placed in given waypoints may be performed or any othe application based on prof recommendation.
+    - The object location and its desired end location will be given, UR5 will reach the initial location, grab the object, and place it in the given desired location.
+
+ - Fall Back Goals:
+    - Simulation of UR5 in gazebo world with custom designed world in Gazebo with our own ROS package.
+    - Implement basic movement of UR5 hardware in RRL where the robot may reach a given start location from any random arbitrary location and then move to a given end/desired location without any pick and place of objects.
+
+## Folder Structure:
+ - "Pre-Proposal" folder contains the project pre-proposal (word & PDF).
+     - [a relative link](./Pre-Proposal)
+ - "Proposal folder" contains the project proposal (word & PDF).
+     - [a relative link](./Proposal)
+ - "readme_image" folder contains the readme images.
+     - [a relative link](./readme_image)
+ - "Report" folder contains the project report (word & PDF)
+     - [a relative link](./Report)
+ - "results" folder contains project demo videos
+     - [a relative link](./results)
+ - "src" folder contains the ROS packages
+     - [a relative link](./src)
+ - "UR5_Model" folder contains the SOLIDWORKS model developed
+     - [a relative link](./UR5_Model)
+ - "PPT_Final Project" is the final presentation given in class
+     - [a relative link](./PPT_Final%20Project.pptx)
+
+## ROS Packages:
+ - "robot_params.py" - python program containing the DH table and a class to access the DH table data.
+     - [a relative link](src/ur5v1/src/robot_params.py)
+ - "utilities.py" - python program containing the FK calc method.
+     - [a relative link](src/ur5v1/src/utilities.py)
+ - "pick_place_moveit_joint_control.cpp" - move group c++ interface for pick & place operation, calls the planner and passes the pose goal defined in moveit package.
+     - [a relative link](src/ur5v1/src/pick_place_moveit_joint_control.cpp)
+ - "pick_and_place.py" - python program which does pick & place operation in Gazebo. (same as prev file but doesn't use moveit, directly passes the value to gazebo for action)
+     - [a relative link](src/ur5v1/src/pick_and_place.py)
+ - "IK_Nemerical_DH.py" - python program which has the IK solver using Newton - Rapson method.
+     - [a relative link](src/ur5v1/src/IK_Nemerical_DH.py)
+ - "robot_joint_publisher.py" - python program which publishes the joint angles computed.
+     - [a relative link](src/ur5v1/src/robot_joint_publisher.py) 
+
+## DOFs and Dimensions: 
+
+![My Image](./readme_image/dof_formula.png)
+config
+
+Number of Links N = 6
+Number of Joints J = 5
+DOF in 3-D space m = 6
+DoF = 6(6-1-5) + 5 * 1 = 5
+
+![My Image](./readme_image/dimensions.png)
+
+
+## CAD Model:
+
+![My Image](./readme_image/UR5_CAD.png)
+
+
+## DH Table:
+
+![My Image](./readme_image/DH_Table.png)
+
+
+## Inverse Kinematics:
+ - Inverse Kinematics gives us a method for finding the joint angles given an end effector configuration This can sometimes be done analytically (geometrically), but this is often difficult.
+ - Hence, a numerical method - Newton-Raphson method – has been used for inverse kinematics.
+
+ - Inverse kinematics problem can be viewed as finding roots of a nonlinear equation: T(θ) = X
+ - Many numerical methods exist for finding roots of nonlinear equations. The standard Newton-Raphson method for solving x = f(θ), where θ ∈ Rn and x ∈ Rm.
+
+![My Image](./readme_image/IK_graph.png)
+
+
+ - Joint update equation is (Newton – Raphson method):
+    - q = q + step*deltaq
+    - deltaq = jacobian * ΔError (as end effector Transformation Matrix Difference)
+    - Jacobian = error gradient between q± Δ (as end effector Transformation Matrix Difference)
+    - Damped Least Squares update is Δq = J.T * Pinv(J*J.T + λ*I) * ΔError
+
+## Workspace Study:
+ - The workspace of a UR arm is spherical, and in the working area diagrams it’s represented with two concentric circles, a smaller one labelled “Recommended Reach” and a slightly larger one labelled “Max. working area”. In the centre of the workspace, directly above and below the base joint there is a column, inside which there are also some restrictions on robot movement.
+ - The example below is from the UR5e robot working area diagram that can be found here:
+
+![My Image](./readme_image/workspace_study_CAD.png)
+
+
+## Assumptions:
+ - The following assumptions are made during the execution of the project.
+    - Numerical Inverse Kinematics calculation requires an initial guess which can be solved using a planner in real world applications.
+    - Joint constraints are ignored in IK calculation.
+    - Environmental/workspace constraints will be handled by the planner.
+    - Numerical Inverse Kinematics will converge in real time.
+
+## Gazebo & RViz Simulation: 
+ - The simulation video demonstrating application in Gazebo directly run from python file is archived in the folder – ‘Results’ in the main branch.
+
+ ![Watch the video](./results/UR5_Gazebo_Demo.avi)
+
+
+ - The simulation video demonstrating the application of ‘MoveIt’ ROS package in Rviz, utilising our own developed IK plugin, are archived in the folder ‘results’ in main branch.
+
+ ![Watch the video](./results/UR5_RVIZ_Demo.avi)
+
+
+## Implementation on real hardware – UR5e:
+ - The forward and inverse kinematics, developed above, are implemented on real hardware – UR5e and validated against the expected results as shown in the above simulation videos.
+ - The following is the recorded video on the real hardware:
+    - (to be added)
