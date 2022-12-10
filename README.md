@@ -83,23 +83,26 @@
 ## Instructions to run the package:
 Run the following commands in order: <br/>
 Clone Repo and Build
-```
-git clone https://github.com/stark-2000/UR5_Pick-Place_Hardware.git
-cd UR5_Pick-Place_Hardware
-catkin_make
-```
-Run Rviz simulation of Pick & Place
-```
-source ./devel/setup.bash
-roslaunch ur5_moveit demo.launch
-rosrun ur5v1 pick_place_moveit_joint_control
-```
-Run Gazebo simulation of pick & place
-```
-source ./devel/setup.bash
-roslaunch ur5v1 control.launch
-```
-Click play button in Gazeboo before doing the pick & place
+ ```
+ git clone https://github.com/stark-2000/UR5_Pick-Place_Hardware.git
+ cd UR5_Pick-Place_Hardware
+ catkin_make
+ ```
+Run Rviz simulation - Pick & Place
+ ```
+ source ./devel/setup.bash
+ roslaunch ur5_moveit demo.launch
+ ```
+ - Open new terminal and run below command
+ ```
+ rosrun ur5v1 pick_place_moveit_joint_control
+ ```
+Run Gazebo simulation - Pick & Place
+ ```
+ source ./devel/setup.bash
+ roslaunch ur5v1 control.launch
+ ```
+Click play button in Gazeboo and open new terminal & run following command
 ```
 python3 ./src/ur5v1/src/pick_and_place.py
 ```
