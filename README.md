@@ -141,12 +141,12 @@
 ## Gazebo & RViz Simulation: 
  - The simulation video demonstrating application in Gazebo directly run from python file is archived in the folder – ‘Results’ in the main branch.
 
- ![Watch the video](./results/UR5_Gazebo_Demo.avi)
+https://user-images.githubusercontent.com/78305300/206824643-dc5ea155-37e7-467e-b75f-5fbe8dc0bc2d.mp4
 
 
  - The simulation video demonstrating the application of ‘MoveIt’ ROS package in Rviz, utilising our own developed IK plugin, are archived in the folder ‘results’ in main branch.
 
- ![Watch the video](./results/UR5_RVIZ_Demo.avi)
+https://user-images.githubusercontent.com/78305300/206824651-565fc9dc-3db8-45b6-b45d-8273c6baae5d.mp4
 
 
 ## Implementation on real hardware – UR5e:
