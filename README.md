@@ -149,7 +149,7 @@ python3 ./src/UR5v1/src/pick_and_place.py
  - The screenshot below is the final jacobian matrix output at each pose of the pick & place action of UR5e:
 
 <p align="center">
-  <img src="./readme_image/IK_graph.png" />
+  <img src="./readme_image/jacobian_matrix.png" />
 </p>
 
 
@@ -165,7 +165,7 @@ python3 ./src/UR5v1/src/pick_and_place.py
  - The figure below is the plot output of UR5e - rough reachable workspace plotted using final transformation matrix FK (a sphere is enclosed or formed by the 2 circles plotted which is roughly the working area of UR5e): 
 
 <p align="center">
-  <img src="./readme_image/jacobian_matrix.png" />
+  <img src="./readme_image/plot_workspace.png" />
 </p>
 
 
