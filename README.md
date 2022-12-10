@@ -52,33 +52,33 @@
  - "Pre-Proposal" folder contains the project pre-proposal (word & PDF).
      - [click here to view the file](./Pre-Proposal)
  - "Proposal folder" contains the project proposal (word & PDF).
-     - [a relative link](./Proposal)
+     - [click here to view the file](./Proposal)
  - "readme_image" folder contains the readme images.
-     - [a relative link](./readme_image)
+     - [click here to view the file](./readme_image)
  - "Report" folder contains the project report (word & PDF)
-     - [a relative link](./Report)
+     - [click here to view the file](./Report)
  - "results" folder contains project demo videos
-     - [a relative link](./results)
+     - [click here to view the file](./results)
  - "src" folder contains the ROS packages
-     - [a relative link](./src)
+     - [click here to view the file](./src)
  - "UR5_Model" folder contains the SOLIDWORKS model developed
-     - [a relative link](./UR5_Model)
+     - [click here to view the file](./UR5_Model)
  - "PPT_Final Project" is the final presentation given in class
-     - [a relative link](./PPT_Final%20Project.pptx)
+     - [click here to view the file](./PPT_Final%20Project.pptx)
 
 ## ROS Packages:
  - "robot_params.py" - python program containing the DH table and a class to access the DH table data.
-     - [a relative link](src/ur5v1/src/robot_params.py)
+     - [click here to view the file](src/ur5v1/src/robot_params.py)
  - "utilities.py" - python program containing the FK calc method.
-     - [a relative link](src/ur5v1/src/utilities.py)
+     - [click here to view the file](src/ur5v1/src/utilities.py)
  - "pick_place_moveit_joint_control.cpp" - move group c++ interface for pick & place operation, calls the planner and passes the pose goal defined in moveit package.
-     - [a relative link](src/ur5v1/src/pick_place_moveit_joint_control.cpp)
+     - [click here to view the file](src/ur5v1/src/pick_place_moveit_joint_control.cpp)
  - "pick_and_place.py" - python program which does pick & place operation in Gazebo. (same as prev file but doesn't use moveit, directly passes the value to gazebo for action)
-     - [a relative link](src/ur5v1/src/pick_and_place.py)
+     - [click here to view the file](src/ur5v1/src/pick_and_place.py)
  - "IK_Nemerical_DH.py" - python program which has the IK solver using Newton - Rapson method.
-     - [a relative link](src/ur5v1/src/IK_Nemerical_DH.py)
+     - [click here to view the file](src/ur5v1/src/IK_Nemerical_DH.py)
  - "robot_joint_publisher.py" - python program which publishes the joint angles computed.
-     - [a relative link](src/ur5v1/src/robot_joint_publisher.py) 
+     - [click here to view the file](src/ur5v1/src/robot_joint_publisher.py) 
 
 ## DOFs and Dimensions: 
 
@@ -139,12 +139,12 @@
     - Numerical Inverse Kinematics will converge in real time.
 
 ## Gazebo & RViz Simulation: 
- - The simulation video demonstrating application in Gazebo directly run from python file is archived in the folder – ‘Results’ in the main branch.
+ - The simulation video demonstrating application in Gazebo directly run from python file is archived in the folder – ‘Results’ in the main branch. See the below video.
 
 https://user-images.githubusercontent.com/78305300/206824643-dc5ea155-37e7-467e-b75f-5fbe8dc0bc2d.mp4
 
 
- - The simulation video demonstrating the application of ‘MoveIt’ ROS package in Rviz, utilising our own developed IK plugin, are archived in the folder ‘results’ in main branch.
+ - The simulation video demonstrating the application of ‘MoveIt’ ROS package in Rviz, utilising our own developed IK plugin, are archived in the folder ‘results’ in main branch. See the below video.
 
 https://user-images.githubusercontent.com/78305300/206824744-f6c292a9-440b-4d54-b393-7ceaf4e11a54.mp4
 
