@@ -184,13 +184,13 @@ python3 ./src/ur5v1/src/pick_and_place.py
  - The simulation video demonstrating application in Gazebo directly run from python file is archived in the folder – ‘Results’ in the main branch. See the below video.
 
     <div align="center">
-        <video src="./results/UR5_Gazebo_Demo.mp4" />
+        <video src="https://user-images.githubusercontent.com/78305300/227698134-a9374c84-de82-4ad8-8527-4f460879c2a6.mp4" />
     <div/>
 
  - The simulation video demonstrating the application of ‘MoveIt’ ROS package in Rviz, utilising our own developed IK plugin, are archived in the folder ‘results’ in main branch. See the below video.
 
     <div align="center">
-        <video src="./results/UR5_RVIZ_Demo.mp4" />
+        <video src="https://user-images.githubusercontent.com/78305300/227698142-44071d52-d4f9-489d-97ae-cbb76e06bb70.mp4" />
     <div/>
 
 ## Implementation on real hardware – UR5e:
