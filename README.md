@@ -209,7 +209,7 @@ python3 ./src/ur5v1/src/pick_and_place.py
     
  - RVIZ Parameters & ROS Workspace:
     <p align="center">
-        <img src="![Output Screenshot](https://user-images.githubusercontent.com/78305300/227703184-068480a7-58e1-4796-a9ce-60c7920f521a.png)" />
+        <img src="https://user-images.githubusercontent.com/78305300/227703184-068480a7-58e1-4796-a9ce-60c7920f521a.png" />
     </p>
 
 ## Instructions to run the package (for hardware):
@@ -236,5 +236,6 @@ Note:
 - The kinematics_config is the name of the file that contains the kinematics parameters for the robot. This file is located in the ur5e_moveit_config/config folder.
 - The robot_ip and kinematics_config are specific to the robot you are using. Please refer to the documentation for your robot for the correct values.
 - For setting up the hardware before running these commands, please follow the instructions in the manual provided by the manufacturer.
-- The robot is setup and initialised using the teach pendant. The robot is then moved to the home position using the teach pendant and the moveit package we built is used to move the robot to the desired position and orientation. The package is loaded in the target computer to which the robot is connected and the commands are run in the order mentioned above.
+- The robot is setup and initialised using the teach pendant. The robot is then moved to the home position using the teach pendant and the moveit package we built is used to move the robot to the desired position and orientation. 
+- The package is loaded in the target computer to which the robot is connected and the commands are run in the order mentioned above.
 - Detailed instructions and setup procedure for all the steps relating to hardware are provided in the manual provided by the manufacturer.
