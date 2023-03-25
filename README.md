@@ -184,13 +184,13 @@ python3 ./src/ur5v1/src/pick_and_place.py
  - The simulation video demonstrating application in Gazebo directly run from python file is archived in the folder – ‘Results’ in the main branch. See the below video.
 
 <div align="center">
-  <video src="https://user-images.githubusercontent.com/78305300/206824643-dc5ea155-37e7-467e-b75f-5fbe8dc0bc2d.mp4" width=400/>
+  <video src="https://user-images.githubusercontent.com/78305300/206824643-dc5ea155-37e7-467e-b75f-5fbe8dc0bc2d.mp4" />
 <div/>
 
  - The simulation video demonstrating the application of ‘MoveIt’ ROS package in Rviz, utilising our own developed IK plugin, are archived in the folder ‘results’ in main branch. See the below video.
 
 <div align="center">
-  <video src="https://user-images.githubusercontent.com/78305300/227697069-10c5ae4b-b32f-4da9-9055-1095e7ee510a.mp4" width=400/>
+  <video src="https://user-images.githubusercontent.com/78305300/227697069-10c5ae4b-b32f-4da9-9055-1095e7ee510a.mp4" />
 <div/>
 
 ## Implementation on real hardware – UR5e:
@@ -198,11 +198,11 @@ python3 ./src/ur5v1/src/pick_and_place.py
  - The following is a short demo video of the robot in action:
  
 <div align="center">
-  <video src="https://user-images.githubusercontent.com/78305300/227679797-3db5f40e-7369-4dbe-9113-9ed7b1362082.mp4" width=400/>
+  <video src="https://user-images.githubusercontent.com/78305300/227679797-3db5f40e-7369-4dbe-9113-9ed7b1362082.mp4" />
 <div/>
 
  - The following is the full demo video on the real hardware which includes prepration, safety check and execution:
  
 <div align="center">
-  <video src="https://user-images.githubusercontent.com/78305300/227688937-83490556-aa12-4856-8848-f73e294155ce.mp4" width=400/>
+  <video src="https://user-images.githubusercontent.com/78305300/227688937-83490556-aa12-4856-8848-f73e294155ce.mp4" />
 <div/>
