@@ -188,15 +188,17 @@ https://user-images.githubusercontent.com/78305300/206824643-dc5ea155-37e7-467e-
 
  - The simulation video demonstrating the application of ‘MoveIt’ ROS package in Rviz, utilising our own developed IK plugin, are archived in the folder ‘results’ in main branch. See the below video.
 
-<p align="center">
-  <img src="./results/UR5_RVIZ_Demo.mp4" />
-</p>
+https://user-images.githubusercontent.com/78305300/227697069-10c5ae4b-b32f-4da9-9055-1095e7ee510a.mp4
+
 
 ## Implementation on real hardware – UR5e:
  - The forward and inverse kinematics, developed above, are implemented on real hardware – UR5e in the [Robotics Realization Laboratory](https://robotics.umd.edu/facilities/robotics-realization-laboratory) and validated against the expected results as shown in the above simulation videos.
  - The following is a short demo video of the robot in action:
  
 https://user-images.githubusercontent.com/78305300/227679797-3db5f40e-7369-4dbe-9113-9ed7b1362082.mp4
+
+<p>
+</p>
 
 <p>
 </p>
