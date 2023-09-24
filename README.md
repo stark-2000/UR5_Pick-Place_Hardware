@@ -239,3 +239,14 @@ Note:
 - The robot is setup and initialised using the teach pendant. The robot is then moved to the home position using the teach pendant and the moveit package we built is used to move the robot to the desired position and orientation. 
 - The package is loaded in the target computer to which the robot is connected and the commands are run in the order mentioned above.
 - Detailed instructions and setup procedure for all the steps relating to hardware are provided in the manual provided by the manufacturer.
+
+
+## Implementation on custom built manipultor - hardware:
+- Check the below video for the demonstration of the pick & place operation as shown in UR5e in our custom built manipulator.
+- The manipulator was built from scratch using custom design developed in SOLIDWORKS, KiCAD and Fusion 360. The design was assembled and URDF was generated before the parts were 3D printed to verify its working in simuation (Gazebo).
+- The parts were 3D printed, assembled and programmed using the MoveIT package which was generated the same way we did for UR5e, except this time we used our URDF generated and defined the settings in MoveIT setup assistant from scratch.
+- Once the pick and place task was programmed using move group class, the pose would appear in RVIZ by which we can instruct the robot to plan and execute the action.
+- MoveIT would plan and give the joint angles to achieve the desired pose. The joint angles would be sent to a raspberry pi pico microcontroller connected to the host computer in which the MoveIT and ROS nodes are running. The joint angles are sent over UART serial communication which is received and sent to the respective joints by pico using i2c interface as each joints have a arduino pro mini microcontroller.
+  
+- Video 1: https://youtu.be/uZFN3-d_hQE
+- VIdeo 2: https://youtu.be/7Xjhg34qU5E
